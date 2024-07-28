@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoConnect</title>
+    <style>
+        :root {
+            --background-image: url("WE1.jpg");
+            
+            --text-color: #ffa64d;
+            --link-color: white;
+            --link-hover-color: #ffcc99;
+            --hover-box-color: rgba(117, 212, 200, 0.2); /* Slightly transparent white box */
+            --hover-border-color: #ffcc99; /* Border color for hover effect */
+            --header-border-color: #ffa64d; /* Border color under header */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: var(--background-image);
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: White;
+        }
+        header {
+            position: relative;
+            background-color: rgba(1, 1, 1, 0.1);
+            padding: 10px;
+            text-align: center;
+            color: var(--link-color);
+            border-bottom: 2px solid var(--header-border-color); /* Add border under header */
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            backdrop-filter: blur(3px); /* Apply the blur effect */
+            z-index: -1; /* Place it behind the header content */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            position: relative;
+        }
+        nav {
+            margin-top: 8px;
+            position: relative;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.3em;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 100%;
+            background-color: rgba(100, 100, 100, 0.1);
+            transition: width 0.4s ease, left 0.3s ease;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            border: 2px solid transparent;
+            border-radius: 50px; /* Make the shape oval */
+        }
+        nav a:hover::after {
+            width: 110%;
+            left: 50%;
+            border-color: var(--hover-border-color);
+        }
+        .content {
+	    position: relative;
+            padding: 10px;
+            text-align: left;
+        }
+        .content h1 {
+            font-size: 2.5em; /* Adjust the font size as desired */
+        }
+        .search-box {
+            display: flex;
+            justify-content: center;
+            padding: 95px 0;
+        }
+        .search-box input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid var(--header-border-color);
+            border-radius: 25px; /* Make the shape oval */
+            width: 50%;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            nav a {
+                font-size: 1em;
+                margin: 0 5px;
+            }
+            .content {
+                padding: 50px;
+            }
+            .content h1 {
+                font-size: 2em; /* Adjust the font size for smaller screens */
+            }
+            .search-box input[type="text"] {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AutoConnect</h1>
+        <nav>
+            <a href="index123.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <div class="search-box">
+        <input type="text" placeholder="Search...">
+    </div>
+    <div class="content">
+        <h1> &nbsp; Welcome to AutoConnect</h1>
+        <p>Discover the finest coffee beans from around the world. Indulge in the rich flavors and aromas that make each cup a unique experience.</p>
+    </div>
+</body>
+</html>
